@@ -1,0 +1,28 @@
+<div ng-include="'tpl/include/header.html'"></div>
+<div class="container list-group-item">
+    <form ng-hide="success">
+        <div class="form-group">
+            <label for="userName">联系人:</label>
+            <input type="text" class="form-control" id="userName" ng-model="order.user_name"/>
+        </div>
+        <div class="form-group">
+            <label for="man">性别：</label><br>
+            <input type="radio" name="sex" id="man" value="1" ng-model="order.sex"/><label for="man">先生</label>
+            <input type="radio" name="sex" id="wem" value="2" ng-model="order.sex"/><label for="wem">女士</label>
+        </div>
+        <div class="form-group">
+            <label for="userPhone">联系电话:</label>
+            <input type="text" class="form-control" id="userPhone" ng-model="order.phone"/>
+        </div>
+        <div class="form-group">
+            <label for="userAdress">送餐地址:</label>
+            <textarea class="form-control" id="userAdress" rows="6" ng-model="order.addr"></textarea>
+        </div>
+        <button class="btn btn-success btn-block" ng-click="submitOrder()">确定下单</button>
+    </form>
+</div>
+<div class="container list-group-item" ng-show="success">
+    <div class="alert alert-success">
+        <p>订单成功......................</p>
+    </div>
+</div>

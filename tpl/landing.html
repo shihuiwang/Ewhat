@@ -1,0 +1,25 @@
+<div class="signIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="list-group-item">
+                    <form>
+                        <div class="form-group">
+                            <label for="userId">用户名:</label>
+                            <input type="text" class="form-control" id="userId" placeholder="请输入电话号码" ng-model="user" />
+                        </div>
+                        <div class="form-group">
+                            <label for="psw">密码:</label>
+                            <input type="password" class="form-control" id="psw" ng-model="psw" />
+                        </div>
+                        <button class="btn btn-success" ng-click="landing()">登录</button>
+                        <a href="#/main">不想登录，先去看看吃什么&gt;&gt;</a>
+                        <div class="alert alert-danger" ng-hide="islanding">
+                            <p>用户名或密码错误，请重新输入...</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

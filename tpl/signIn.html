@@ -1,0 +1,26 @@
+<div class="signIn">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="list-group-item" ng-hide="isSignIn">
+                    <h4 class="text-center">填写个人信息注册</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="userId">用户名:</label>
+                            <input type="text" class="form-control" id="userId" placeholder="输入电话号码注册..." ng-model="sign.user_id" />
+                        </div>
+                        <div class="form-group">
+                            <label for="psw">密码:</label>
+                            <input type="password" class="form-control" id="psw" ng-model="sign.pwd" />
+                        </div>
+                        <button class="btn btn-info" ng-click="submitSign()">提交信息</button>
+                        <a href="#/main">不想注册，先去看看吃什么&gt;&gt;</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="alert alert-success" ng-show="isSignIn">
+        <p>{{succMsg}}<a href="#/landing">马上去登录》</a></p>
+    </div>
+</div>
